@@ -13,7 +13,7 @@
 
 # https://github.com/geraldosimiao/Terremoto-em-go
 %global goipath         github.com/geraldosimiao/Terremoto-em-go
-%global tag             1.1
+%global tag             1.1.2
 
 %gometa -f
 
@@ -64,7 +64,7 @@ install -m 0755 -vp %{gobuilddir}/bin/* %{buildroot}%{_bindir}/
 %gopkgfiles
 
 %changelog
-* Fri Jan 19 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 1.1.1
+* Fri Jan 19 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 1.1.2
 - Added tags macro to spec
 * Fri Jan 19 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 0.4
 - Re-added commit macro to spec and regular changelog
