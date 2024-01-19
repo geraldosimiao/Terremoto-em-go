@@ -64,4 +64,13 @@ install -m 0755 -vp %{gobuilddir}/bin/* %{buildroot}%{_bindir}/
 %gopkgfiles
 
 %changelog
-%autochangelog
+* Fri Jan 19 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 0.4
+- Re-added commit macro to spec and regular changelog
+* Fri Jan 19 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 0.3
+- Testing github webhook
+* Fri Jan 19 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 0.2
+- Rebuild with forked sources
+* Thu Jan 18 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 0
+- Rebuild to new commit
+* Wed Oct 25 2023 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 0
+- Initial package for fedora
