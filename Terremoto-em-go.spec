@@ -2,7 +2,7 @@
 ## (rpmautospec version 0.3.5)
 ## RPMAUTOSPEC: autorelease
 %define autorelease(e:s:pb:n) %{?-p:0.}%{lua:
-    release_number = 4;
+    release_number = 1;
     base_release_number = tonumber(rpm.expand("%{?-b*}%{!?-b:1}"));
     print(release_number + base_release_number - 1);
 }%{?-e:.%{-e*}}%{?-s:.%{-s*}}%{!?-n:%{?dist}}
@@ -13,7 +13,7 @@
 
 # https://github.com/geraldosimiao/Terremoto-em-go
 %global goipath         github.com/geraldosimiao/Terremoto-em-go
-%global commit          20115cbc6132e57cc05e35536507042c7890f080
+%global tag             1.1
 
 %gometa -f
 
@@ -64,6 +64,8 @@ install -m 0755 -vp %{gobuilddir}/bin/* %{buildroot}%{_bindir}/
 %gopkgfiles
 
 %changelog
+* Fri Jan 19 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 1.1.1
+- Added tags macro to spec
 * Fri Jan 19 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 0.4
 - Re-added commit macro to spec and regular changelog
 * Fri Jan 19 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 0.3
