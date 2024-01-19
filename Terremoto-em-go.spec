@@ -2,7 +2,7 @@
 ## (rpmautospec version 0.3.5)
 ## RPMAUTOSPEC: autorelease
 %define autorelease(e:s:pb:n) %{?-p:0.}%{lua:
-    release_number = 7;
+    release_number = 8;
     base_release_number = tonumber(rpm.expand("%{?-b*}%{!?-b:1}"));
     print(release_number + base_release_number - 1);
 }%{?-e:.%{-e*}}%{?-s:.%{-s*}}%{!?-n:%{?dist}}
@@ -13,7 +13,7 @@
 
 # https://github.com/geraldosimiao/Terremoto-em-go
 %global goipath         github.com/geraldosimiao/Terremoto-em-go
-%global commit          2c5d71a977af5bde335bc1c72198096c8c53d070
+%global commit          534d543aec31f58e4992de1e501b6d446f303d22
 
 %gometa -f
 
@@ -64,16 +64,8 @@ install -m 0755 -vp %{gobuilddir}/bin/* %{buildroot}%{_bindir}/
 %gopkgfiles
 
 %changelog
-* Fri Jan 19 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 0.7
-- Testing commit macro using hash from old version without total eqk
-* Fri Jan 19 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 0.6
-- Testing commit macro new test
-* Fri Jan 19 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 0.5
-- Added tags macro to spec and redo webhook to push
-* Fri Jan 19 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 0.4
-- Re-added commit macro to spec and regular changelog
-* Fri Jan 19 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 0.3
-- Testing github webhook
+* Fri Jan 19 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 0.3 to 0.8
+- Testing github webhook and copr packaging
 * Fri Jan 19 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 0.2
 - Rebuild with forked sources
 * Thu Jan 18 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 0
