@@ -2,7 +2,7 @@
 ## (rpmautospec version 0.3.5)
 ## RPMAUTOSPEC: autorelease
 %define autorelease(e:s:pb:n) %{?-p:0.}%{lua:
-    release_number = 8;
+    release_number = 9;
     base_release_number = tonumber(rpm.expand("%{?-b*}%{!?-b:1}"));
     print(release_number + base_release_number - 1);
 }%{?-e:.%{-e*}}%{?-s:.%{-s*}}%{!?-n:%{?dist}}
@@ -13,7 +13,7 @@
 
 # https://github.com/geraldosimiao/Terremoto-em-go
 %global goipath         github.com/geraldosimiao/Terremoto-em-go
-%global commit          534d543aec31f58e4992de1e501b6d446f303d22
+%global tag             1.0.9
 
 %gometa -f
 
@@ -24,7 +24,7 @@ Go program to list earthquakes, above 6 degrees, that occurred in the last 30 da
 %global godocs          README.md
 
 Name:           terremoto-em-go
-Version:        0
+Version:        1
 Release:        %autorelease -p
 Summary:        This Go program fetches and displas Earthquake data
 
