@@ -2,7 +2,7 @@
 ## (rpmautospec version 0.3.5)
 ## RPMAUTOSPEC: autorelease
 %define autorelease(e:s:pb:n) %{?-p:0.}%{lua:
-    release_number = 9;
+    release_number = 10;
     base_release_number = tonumber(rpm.expand("%{?-b*}%{!?-b:1}"));
     print(release_number + base_release_number - 1);
 }%{?-e:.%{-e*}}%{?-s:.%{-s*}}%{!?-n:%{?dist}}
@@ -13,7 +13,7 @@
 
 # https://github.com/geraldosimiao/Terremoto-em-go
 %global goipath         github.com/geraldosimiao/Terremoto-em-go
-%global tag             1.0.9
+%global tag             1.0.10
 
 %gometa -f
 
