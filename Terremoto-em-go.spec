@@ -2,7 +2,7 @@
 ## (rpmautospec version 0.3.5)
 ## RPMAUTOSPEC: autorelease
 %define autorelease(e:s:pb:n) %{?-p:0.}%{lua:
-    release_number = 2;
+    release_number = 3;
     base_release_number = tonumber(rpm.expand("%{?-b*}%{!?-b:1}"));
     print(release_number + base_release_number - 1);
 }%{?-e:.%{-e*}}%{?-s:.%{-s*}}%{!?-n:%{?dist}}
@@ -64,6 +64,8 @@ install -m 0755 -vp %{gobuilddir}/bin/* %{buildroot}%{_bindir}/
 %gopkgfiles
 
 %changelog
+* Fri Jan 19 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 0.3
+- Testing github webhook
 * Fri Jan 19 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 0.2
 - Rebuild with forked sources
 * Thu Jan 18 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 0
