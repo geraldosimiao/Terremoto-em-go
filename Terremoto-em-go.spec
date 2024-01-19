@@ -13,6 +13,7 @@
 
 # https://github.com/geraldosimiao/Terremoto-em-go
 %global goipath         github.com/geraldosimiao/Terremoto-em-go
+%global commit          20115cbc6132e57cc05e35536507042c7890f080
 
 %gometa -f
 
@@ -63,13 +64,4 @@ install -m 0755 -vp %{gobuilddir}/bin/* %{buildroot}%{_bindir}/
 %gopkgfiles
 
 %changelog
-* Fri Jan 19 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 0.4
-- Remove commit line from spec
-* Fri Jan 19 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 0.3
-- Testing github webhook
-* Fri Jan 19 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 0.2
-- Rebuild with forked sources
-* Thu Jan 18 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 0
-- Rebuild to new commit
-* Wed Oct 25 2023 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 0
-- Initial package for fedora
+%autochangelog
