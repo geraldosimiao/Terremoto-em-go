@@ -65,7 +65,7 @@ install -m 0755 -vp %{gobuilddir}/bin/* %{buildroot}%{_bindir}/
 
 %changelog
 * Fri Jan 19 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 1.1.2
-- Added tags macro to spec
+- Added tags macro to spec and redo webhook to push
 * Fri Jan 19 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 0.4
 - Re-added commit macro to spec and regular changelog
 * Fri Jan 19 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org> - 0.3
